@@ -32,7 +32,7 @@ export function checklistSyntax($elem, postDecorator) {
         return;
       }
 
-      const ctrlPressed = ev.CtrlKey || false;
+      const ctrlPressed = ev.ctrlKey || false;
 
       const newValue = $box.hasClass("checked") ? "[ ]" : $box.hasClass("partial") || !ctrlPressed ? "[x]" : "[o]";
 
