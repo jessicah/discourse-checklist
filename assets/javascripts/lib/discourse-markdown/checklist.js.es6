@@ -1,4 +1,4 @@
-const REGEX = /\[(\s?|x|X)\]/g;
+const REGEX = /\[(\s?|o|x|X)\]/g;
 
 function getClasses(str) {
   switch (str) {
