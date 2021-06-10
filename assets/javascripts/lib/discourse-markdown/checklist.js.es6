@@ -2,6 +2,8 @@ const REGEX = /\[(\s?|x|X)\]/g;
 
 function getClasses(str) {
   switch (str) {
+    case "o":
+      return "partial fa fa-minus-square-o fa-fw";
     case "x":
       return "checked fa fa-check-square-o fa-fw";
     case "X":
@@ -94,6 +96,7 @@ export function setup(helper) {
   helper.whiteList([
     "span.chcklst-stroked",
     "span.chcklst-box fa fa-square-o fa-fw",
+    "span.chcklst-box partial fa fa-minus-square-o fa-fw",
     "span.chcklst-box checked fa fa-check-square-o fa-fw",
     "span.chcklst-box checked permanent fa fa-check-square fa-fw",
   ]);
