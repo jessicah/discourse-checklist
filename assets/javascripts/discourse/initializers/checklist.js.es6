@@ -32,7 +32,9 @@ export function checklistSyntax($elem, postDecorator) {
         return;
       }
 
-      const newValue = $box.hasClass("checked") ? "[ ]" : $box.hasClass("partial") ? "[x]" : "[o]";
+      const shiftPressed = ev.shiftKey || false;
+
+      const newValue = $box.hasClass("checked") ? "[ ]" : $box.hasClass("partial") || !shiftPressed ? "[x]" : "[o]";
 
       $box.after(iconHTML("spinner", { class: "fa-spin" })).hide();
 
