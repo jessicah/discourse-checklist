@@ -75,7 +75,7 @@ export function checklistSyntax($elem, postDecorator) {
           let nth = -1;
           let found = false;
           const newRaw = result.raw.replace(
-            /\[(\s|\_|\-|\x|\\?\*)?\]/gi,
+            /\[(\s|\_|\-|\o|\x|\\?\*)?\]/gi,
             (match, ignored, off) => {
               if (found) {
                 return match;
